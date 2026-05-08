@@ -42,9 +42,9 @@ export function OrderCreator() {
         
         <div>
           <label className="block text-gray-500 text-xs uppercase mb-1">Visible Liquidity Band (ZKP)</label>
-          <select className="bg-gray-900 border border-gray-800 rounded w-full p-3 text-white outline-none appearance-none">
+          <select className="bg-gray-900 border border-gray-800 rounded w-full p-3 text-white outline-none appearance-none" defaultValue="$1M - $5M">
             <option>$100K - $1M</option>
-            <option selected>$1M - $5M</option>
+            <option>$1M - $5M</option>
             <option>$5M - $10M</option>
             <option>$10M+</option>
           </select>

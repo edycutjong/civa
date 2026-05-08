@@ -18,8 +18,34 @@ const orbitron = Orbitron({
 });
 
 export const metadata: Metadata = {
-  title: "Civa | CipherVault",
-  description: "Institutional OTC Dark Pool on Solana",
+  title: "Civa — Encrypted OTC Dark Pool on Solana",
+  description:
+    "Institutional-grade encrypted OTC dark pool protocol. Zero MEV, hidden identity, atomic settlement via Encrypt SDK and Ika Custody. Audited by Adevar.",
+  keywords: [
+    "OTC",
+    "dark pool",
+    "Solana",
+    "DeFi",
+    "privacy",
+    "encrypted trading",
+    "institutional crypto",
+    "MEV protection",
+  ],
+  authors: [{ name: "Edy Cu", url: "https://x.com/edycutjong" }],
+  openGraph: {
+    title: "Civa — Encrypted OTC Dark Pool on Solana",
+    description:
+      "Zero MEV. Hidden Identity. Atomic Settlement. The encrypted OTC protocol for institutional crypto trading.",
+    images: ["/docs/assets/og-image.png"],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Civa — Encrypted OTC Dark Pool",
+    description: "Institutional-grade privacy for crypto trading on Solana.",
+    images: ["/docs/assets/og-image.png"],
+    creator: "@edycutjong",
+  },
 };
 
 export default function RootLayout({
@@ -33,7 +59,9 @@ export default function RootLayout({
       className={`${inter.variable} ${jetbrainsMono.variable} ${orbitron.variable} dark antialiased`}
       style={{ colorScheme: "dark" }}
     >
-      <body className="min-h-screen bg-black text-gray-100 flex flex-col font-sans">{children}</body>
+      <body className="min-h-screen bg-[#020617] text-gray-100 flex flex-col font-sans">
+        {children}
+      </body>
     </html>
   );
 }
