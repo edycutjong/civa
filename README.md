@@ -128,9 +128,6 @@ src/
 │   └── adevar.ts                        # Encrypt/Ika SDK client
 docs/
 ├── ARCHITECTURE.md                      # System architecture
-├── PRD.md                               # Product requirements
-├── SUBMISSION.md                        # Hackathon submission
-├── SPONSOR_DEFENSE.md                   # Sponsor integration details
 └── assets/                              # Visual assets (icon, OG, hero)
 ```
 
