@@ -39,3 +39,22 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# generated assets (large PNGs, node_modules)
+docs/assets/
+
+# internal planning docs (not for public repo)
+docs/BUILD_PLAN.md
+docs/IDEAS.md
+docs/IDEATION_PROMPT.md
+docs/IDEATION_PROMPT_R1.md
+docs/IDEATION_SYNTHESIS.md
+docs/POSTMORTEM_CHECKLIST.md
+docs/PRD.md
+docs/PRODUCTION_PLAN.md
+docs/RESEARCH.md
+docs/SEED_DATA.md
+docs/SPONSOR_DEFENSE.md
+docs/SUBMISSION.md
+docs/UI.md
+docs/WINNER_ANALYSIS.md
