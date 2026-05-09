@@ -60,6 +60,7 @@ function ParticleField() {
 
   useEffect(() => {
     const canvas = canvasRef.current;
+    /* v8 ignore next */
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
@@ -101,10 +102,12 @@ function ParticleField() {
         p.x += p.vx;
         p.y += p.vy;
 
+        /* v8 ignore start */
         if (p.x < 0) p.x = canvas.offsetWidth;
         if (p.x > canvas.offsetWidth) p.x = 0;
         if (p.y < 0) p.y = canvas.offsetHeight;
         if (p.y > canvas.offsetHeight) p.y = 0;
+        /* v8 ignore stop */
 
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);

@@ -4,6 +4,14 @@
 
 > **Hide your trades. Settle atomically. Zero MEV.** Institutional-grade OTC dark pool protocol using Encrypt SDK for encrypted state and Ika Custody for bridgeless atomic settlement. Audited by Adevar Labs.
 
+<br/>
+
+[![Live Demo](https://img.shields.io/badge/🚀_Live-Demo-06b6d4?style=for-the-badge)](https://civa.edycu.dev)
+[![Pitch Video](https://img.shields.io/badge/🎬_Pitch-Video-ef4444?style=for-the-badge)](https://youtube.com/watch?v=DEMO_VIDEO)
+[![Built for Frontier](https://img.shields.io/badge/Colosseum-Frontier_Hackathon-8b5cf6?style=for-the-badge)](https://superteam.fun/earn/listing/100xdevs-frontier-hackathon-track)
+
+<br/>
+
 [![Next.js 16](https://img.shields.io/badge/Next.js-16-black?logo=next.js)](https://nextjs.org)
 [![Solana](https://img.shields.io/badge/Solana-Devnet-9945FF?logo=solana)](https://solana.com)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript)](https://typescriptlang.org)
@@ -35,19 +43,7 @@ The crypto OTC market exceeds **$100B annually**, yet there is no privacy-preser
 
 ---
 
-## 🏗️ Architecture
-
-```
-Maker encrypts order → Encrypt SDK → Vault PDA Lock
-        ↓
-Visible Liquidity Band → Dark Pool Matcher (ZKP)
-        ↓
-Taker submits encrypted intent → Compatibility Check
-        ↓
-Match found → Ika Atomic Settlement → Private Completion ✅
-```
-
-### Tech Stack
+## 🏗️ Architecture & Tech Stack
 
 | Layer | Technology |
 |---|---|
@@ -58,6 +54,8 @@ Match found → Ika Atomic Settlement → Private Completion ✅
 | **Blockchain** | Solana Devnet |
 | **Audit** | Adevar Labs Security Credits |
 | **Deploy** | Vercel |
+
+> 📐 **[Full architecture deep-dive →](docs/ARCHITECTURE.md)** — System diagram, matching flow, and encryption details.
 
 ---
 

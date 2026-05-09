@@ -18,6 +18,7 @@ const orbitron = Orbitron({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://civa.edycu.dev"),
   title: "Civa — Encrypted OTC Dark Pool on Solana",
   description:
     "Institutional-grade encrypted OTC dark pool protocol. Zero MEV, hidden identity, atomic settlement via Encrypt SDK and Ika Custody. Audited by Adevar.",
@@ -32,18 +33,19 @@ export const metadata: Metadata = {
     "MEV protection",
   ],
   authors: [{ name: "Edy Cu", url: "https://x.com/edycutjong" }],
+  icons: {
+    icon: "/icon.svg",
+  },
   openGraph: {
     title: "Civa — Encrypted OTC Dark Pool on Solana",
     description:
       "Zero MEV. Hidden Identity. Atomic Settlement. The encrypted OTC protocol for institutional crypto trading.",
-    images: ["/docs/assets/og-image.png"],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Civa — Encrypted OTC Dark Pool",
     description: "Institutional-grade privacy for crypto trading on Solana.",
-    images: ["/docs/assets/og-image.png"],
     creator: "@edycutjong",
   },
 };
