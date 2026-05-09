@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Civa - Pitch Deck</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/black.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/highlight/monokai.min.css">
+
+    <style>
+      .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+        text-transform: none;
+        font-family: 'Inter', system-ui, sans-serif;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+      }
+      .reveal .brand-text {
+        background: linear-gradient(90deg, #06b6d4, #a855f7);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 800;
+      }
+      .reveal .subtext {
+        color: #94a3b8;
+        font-size: 0.6em;
+        margin-top: -10px;
+      }
+      .reveal .slide-background {
+        background: radial-gradient(circle at 50% 50%, #020617 0%, #000000 100%);
+      }
+      .reveal ul {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+        text-align: left;
+      }
+      .reveal li {
+        margin-bottom: 20px;
+        color: #e2e8f0;
+      }
+      .reveal .highlight {
+        color: #22d3ee;
+        font-weight: 600;
+      }
+      .grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+      }
+      .metric-box {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        padding: 30px;
+        text-align: center;
+      }
+      .metric-value {
+        font-size: 2.5em;
+        font-weight: bold;
+        color: #06b6d4;
+        margin: 0;
+      }
+      .metric-label {
+        font-size: 0.5em;
+        color: #94a3b8;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-top: 10px;
+      }
+      .footer-badge {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        font-size: 14px;
+        color: #64748b;
+        font-family: monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        
+        <!-- Slide 1: Title -->
+        <section>
+          <h1 class="brand-text">CIVA</h1>
+          <p>CipherVault Protocol</p>
+          <p class="subtext">Encrypted OTC Dark Pool for Institutional Crypto Trading on Solana</p>
+          <p style="font-size: 0.5em; color: #94a3b8; margin-top: 20px;">Zero MEV · Hidden Identity · Atomic Settlement · Adevar Audited</p>
+          <div style="margin-top: 50px;">
+            <small style="color: #64748b; letter-spacing: 2px; text-transform: uppercase;">Colosseum Frontier Hackathon 2026</small>
+          </div>
+        </section>
+
+        <!-- Slide 2: The Problem -->
+        <section>
+          <h2><span style="color: #ef4444;">$1.4B Lost to MEV</span></h2>
+          <p class="subtext">in 2025 alone</p>
+          <ul>
+            <li>🎯 Every large trade is a broadcast to MEV bots — front-running within 400ms</li>
+            <li>📉 A $2M sell on a public AMM moves price 2-5%, costing tens of thousands</li>
+            <li>👁️ On-chain analysis links wallets to real identities — competitors see your positions</li>
+            <li>⏳ Traditional OTC desks are custodial, slow (T+1), and KYC-gated</li>
+          </ul>
+          <div style="margin-top: 40px; text-align: left; width: 80%; margin: 40px auto; background: rgba(255,255,255,0.05); padding: 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
+            <strong style="color: #22d3ee; font-size: 1.2em;">$100B+</strong>
+            <p style="font-size: 0.6em; color: #94a3b8; margin: 0;">Annual OTC market with NO privacy-preserving protocol on Solana</p>
+          </div>
+        </section>
+
+        <!-- Slide 3: The Solution -->
+        <section>
+          <h2>Trade in the <span class="brand-text">Dark</span></h2>
+          <p class="subtext">Civa Protocol</p>
+          <div class="grid-2" style="margin-top: 40px;">
+            <div class="metric-box" style="text-align: left; padding: 20px;">
+              <h3 style="font-size: 1em; color: #06b6d4;">01 Encrypt</h3>
+              <p style="font-size: 0.6em; color: #94a3b8;">Maker deposits SOL → order params encrypted via Encrypt SDK</p>
+            </div>
+            <div class="metric-box" style="text-align: left; padding: 20px;">
+              <h3 style="font-size: 1em; color: #a855f7;">02 Match</h3>
+              <p style="font-size: 0.6em; color: #94a3b8;">Taker browses liquidity bands → blind compatibility check</p>
+            </div>
+            <div class="metric-box" style="text-align: left; padding: 20px;">
+              <h3 style="font-size: 1em; color: #22c55e;">03 Settle</h3>
+              <p style="font-size: 0.6em; color: #94a3b8;">Ika atomic custody → simultaneous swap, zero custodial risk</p>
+            </div>
+            <div class="metric-box" style="text-align: left; padding: 20px;">
+              <h3 style="font-size: 1em; color: #06b6d4;">04 Private</h3>
+              <p style="font-size: 0.6em; color: #94a3b8;">Solscan sees nothing. Civa sees everything. That's the point.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 4: Architecture -->
+        <section>
+          <h2>How It Works</h2>
+          <p class="subtext">End-to-end encrypted flow</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 40px;">
+            <div class="metric-box" style="min-width: 150px; padding: 15px;">
+              <div style="font-size: 2em;">🔒</div>
+              <div style="font-size: 0.8em; color: #06b6d4; font-weight: bold;">Maker</div>
+              <div style="font-size: 0.5em; color: #94a3b8;">Encrypts order params</div>
+            </div>
+            <div style="display: flex; align-items: center; color: #64748b;">→</div>
+            <div class="metric-box" style="min-width: 150px; padding: 15px;">
+              <div style="font-size: 2em;">🛡️</div>
+              <div style="font-size: 0.8em; color: #06b6d4; font-weight: bold;">Encrypt SDK</div>
+              <div style="font-size: 0.5em; color: #94a3b8;">Confidential Token Standard</div>
+            </div>
+            <div style="display: flex; align-items: center; color: #64748b;">→</div>
+            <div class="metric-box" style="min-width: 150px; padding: 15px;">
+              <div style="font-size: 2em;">⚡</div>
+              <div style="font-size: 0.8em; color: #06b6d4; font-weight: bold;">Ika Custody</div>
+              <div style="font-size: 0.5em; color: #94a3b8;">Atomic settlement</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 5: Why Adevar -->
+        <section>
+          <h2>Audit = <span style="color: #ef4444;">Go-to-Market</span></h2>
+          <p class="subtext">Security isn't optional — it's the product</p>
+          <ul style="font-size: 0.7em;">
+            <li><span style="color: #ef4444; font-weight: bold;">Front-running</span>: All order params encrypted via Encrypt SDK</li>
+            <li><span style="color: #ef4444; font-weight: bold;">Vault drainage</span>: Multi-sig admin + timelock on upgrades</li>
+            <li><span style="color: #f59e0b; font-weight: bold;">Double-spend</span>: Atomic escrow — both sides lock first</li>
+            <li><span style="color: #ef4444; font-weight: bold;">Admin key compromise</span>: MPC signing — no single key access</li>
+          </ul>
+          <p style="font-size: 0.7em; color: #94a3b8; margin-top: 30px; border-left: 4px solid #ef4444; padding-left: 20px; text-align: left; width: 80%; margin-left: auto; margin-right: auto;">
+            "No institutional user deposits $1M+ into an unaudited protocol. The audit IS the product."
+          </p>
+        </section>
+
+        <!-- Slide 6: Tech Stack -->
+        <section>
+          <h2>Built for Production</h2>
+          <p class="subtext">Not a hackathon throwaway</p>
+          <div class="grid-2" style="margin-top: 30px;">
+            <div class="metric-box" style="padding: 20px; text-align: left;">
+              <span style="font-size: 1.5em; margin-right: 10px;">🖥️</span> <strong style="color: #e2e8f0;">Frontend</strong>
+              <div style="font-size: 0.6em; color: #94a3b8; margin-top: 5px;">Next.js 16 · React 19 · Tailwind v4</div>
+            </div>
+            <div class="metric-box" style="padding: 20px; text-align: left;">
+              <span style="font-size: 1.5em; margin-right: 10px;">🔐</span> <strong style="color: #e2e8f0;">Privacy</strong>
+              <div style="font-size: 0.6em; color: #94a3b8; margin-top: 5px;">Encrypt SDK — Confidential Tokens + ZKP</div>
+            </div>
+            <div class="metric-box" style="padding: 20px; text-align: left;">
+              <span style="font-size: 1.5em; margin-right: 10px;">⚡</span> <strong style="color: #e2e8f0;">Settlement</strong>
+              <div style="font-size: 0.6em; color: #94a3b8; margin-top: 5px;">Ika Custody — Bridgeless Atomic Swap</div>
+            </div>
+            <div class="metric-box" style="padding: 20px; text-align: left;">
+              <span style="font-size: 1.5em; margin-right: 10px;">🛡️</span> <strong style="color: #e2e8f0;">Audit</strong>
+              <div style="font-size: 0.6em; color: #94a3b8; margin-top: 5px;">Adevar Labs Security Review</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 7: Demo -->
+        <section>
+          <h2>See It In <span class="brand-text">Action</span></h2>
+          <p class="subtext">frontier-adevar.vercel.app</p>
+          <ul style="font-size: 0.8em; margin-top: 40px;">
+            <li>Encrypted Order Creation (with ZK proof generation)</li>
+            <li>Dark Pool Liquidity Board (anonymized liquidity bands)</li>
+            <li>Split-Screen Privacy Gap (Public explorer vs Civa decrypted view)</li>
+            <li>Real-time Settlement (Atomic execution in under 10 seconds)</li>
+          </ul>
+        </section>
+
+        <!-- Slide 8: Closing -->
+        <section>
+          <h2>Fund the <span class="brand-text">Audit</span></h2>
+          <p class="subtext">Ship the Protocol</p>
+          <p style="font-size: 0.8em; line-height: 1.5; color: #cbd5e1; margin-bottom: 40px; text-align: left; width: 80%; margin-left: auto; margin-right: auto;">
+            Civa is live on devnet with 72 tests and reproducible benchmarks. We need Adevar Labs' audit to take this to mainnet safely.
+          </p>
+          <div style="background: rgba(255,255,255,0.05); padding: 30px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); width: 60%; margin: 0 auto; text-align: left;">
+            <p style="margin: 10px 0;"><strong style="color: #22d3ee;">Live App:</strong> <a href="https://frontier-adevar.vercel.app" target="_blank" style="color: #fff;">frontier-adevar.vercel.app</a></p>
+            <p style="margin: 10px 0;"><strong style="color: #22d3ee;">GitHub:</strong> <a href="https://github.com/edycutjong/frontier-adevar" target="_blank" style="color: #fff;">edycutjong/frontier-adevar</a></p>
+            <p style="margin: 10px 0;"><strong style="color: #22d3ee;">Twitter:</strong> <a href="https://x.com/edycutjong" target="_blank" style="color: #fff;">x.com/edycutjong</a></p>
+          </div>
+          <p style="font-size: 0.5em; color: #94a3b8; margin-top: 40px;">Built solo by Edy Cu Tjong · @edycutjong</p>
+        </section>
+
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/highlight/highlight.js"></script>
+    <script>
+      Reveal.initialize({
+        hash: true,
+        transition: 'slide',
+        backgroundTransition: 'fade',
+        plugins: [ RevealHighlight ]
+      });
+    </script>
+  </body>
+</html>
