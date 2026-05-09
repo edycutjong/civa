@@ -163,7 +163,7 @@ export default function PitchDeck() {
     <div className="min-h-screen bg-[#020617] text-white overflow-hidden select-none">
       {/* Background gradient */}
       <div
-        className={`fixed inset-0 bg-gradient-to-br ${slide.gradient} transition-all duration-700 pointer-events-none`}
+        className={`fixed inset-0 bg-linear-to-br ${slide.gradient} transition-all duration-700 pointer-events-none`}
       />
 
       {/* Grid overlay */}
@@ -194,7 +194,7 @@ export default function PitchDeck() {
       {/* Progress bar */}
       <div className="fixed top-0 left-0 right-0 z-50 h-0.5 bg-gray-900">
         <div
-          className="h-full bg-gradient-to-r from-cyan-500 to-purple-500 transition-all duration-500 ease-out"
+          className="h-full bg-linear-to-r from-cyan-500 to-purple-500 transition-all duration-500 ease-out"
           style={{ width: `${((current + 1) / slides.length) * 100}%` }}
         />
       </div>
@@ -294,7 +294,7 @@ export default function PitchDeck() {
             <div className="flex flex-wrap items-center gap-3 mt-4">
               {slide.flow.map((f, i) => (
                 <React.Fragment key={i}>
-                  <div className="flex-shrink-0 p-4 rounded-xl bg-gray-800/30 border border-gray-700/50 text-center min-w-[130px]">
+                  <div className="shrink-0 p-4 rounded-xl bg-gray-800/30 border border-gray-700/50 text-center min-w-[130px]">
                     <div className="text-2xl mb-1">{f.icon}</div>
                     <div className="font-mono text-xs font-bold text-cyan-400">{f.label}</div>
                     <div className="text-[10px] text-gray-500 mt-1">{f.detail}</div>
