@@ -128,7 +128,7 @@ src/
 │   └── adevar.ts                        # Encrypt/Ika SDK client
 docs/
 ├── ARCHITECTURE.md                      # System architecture
-└── assets/                              # Visual assets (icon, OG, hero)
+└── readme-hero.png                      # Hero banner image
 ```
 
 ---
