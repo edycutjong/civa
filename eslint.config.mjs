@@ -12,6 +12,9 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Asset generation scripts use CJS require
+    "docs/**",
+    "coverage/**"
   ]),
 ]);
 

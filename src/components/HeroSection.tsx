@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import Image from "next/image";
 
 /* ===== Animated Counter ===== */
@@ -169,11 +169,11 @@ function OrbitalRing() {
 
 /* ===== Main Hero ===== */
 export function HeroSection() {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  const mounted = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false,
+  );
 
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden mesh-gradient">
