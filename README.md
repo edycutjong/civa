@@ -65,8 +65,8 @@ Match found → Ika Atomic Settlement → Private Completion ✅
 
 ```bash
 # Clone
-git clone https://github.com/edycutjong/frontier-adevar.git
-cd frontier-adevar
+git clone https://github.com/edycutjong/civa.git
+cd civa
 
 # Install
 npm install
@@ -83,10 +83,12 @@ Open [http://localhost:3000](http://localhost:3000) — the hero page loads with
 
 ### Environment Variables
 
-| Variable | Required | Description |
-|----------|----------|-------------|
-| `NEXT_PUBLIC_ADEVAR_API_URL` | ❌ | Encrypt/Ika API endpoint (defaults to demo) |
-| `ADEVAR_API_KEY` | ❌ | API key for live integration |
+| Variable | Required? | Where to Get |
+|----------|-----------|--------------|
+| `NEXT_PUBLIC_ADEVAR_API_URL` | Optional | [Encrypt SDK](https://docs.encrypt.network) — defaults to demo endpoint |
+| `ADEVAR_API_KEY` | Optional | Not required (No developer portal for Ika yet) |
+
+> **💡 Note for Judges:** All API keys are **optional**! The app runs in fully functional demo mode without them. You can test the entire Encrypt/Ika flow using our built-in sample data.
 
 ---
 

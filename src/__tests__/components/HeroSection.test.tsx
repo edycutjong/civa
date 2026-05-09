@@ -86,7 +86,29 @@ describe('HeroSection', () => {
       lineWidth: 0,
     };
     const getContextSpy = vi.spyOn(HTMLCanvasElement.prototype, 'getContext').mockReturnValue(mockContext as unknown as CanvasRenderingContext2D);
-    
+    Object.defineProperty(HTMLCanvasElement.prototype, 'offsetWidth', { configurable: true, value: 30 });
+    Object.defineProperty(HTMLCanvasElement.prototype, 'offsetHeight', { configurable: true, value: 30 });
+
+    const randomSpy = vi.spyOn(Math, 'random')
+      .mockReturnValueOnce(0.99) // p1 x
+      .mockReturnValueOnce(0.99) // p1 y
+      .mockReturnValueOnce(0.99) // p1 vx (positive)
+      .mockReturnValueOnce(0.99) // p1 vy (positive)
+      .mockReturnValueOnce(0.5)  // p1 size
+      .mockReturnValueOnce(0.5)  // p1 opacity
+      .mockReturnValueOnce(0.01) // p2 x
+      .mockReturnValueOnce(0.01) // p2 y
+      .mockReturnValueOnce(0.01) // p2 vx (negative)
+      .mockReturnValueOnce(0.01) // p2 vy (negative)
+      .mockReturnValueOnce(0.5)  // p2 size
+      .mockReturnValueOnce(0.5)  // p2 opacity
+      .mockReturnValueOnce(0.9)  // p3 x
+      .mockReturnValueOnce(0.1)  // p3 y
+      .mockReturnValueOnce(0.5)  // p3 vx
+      .mockReturnValueOnce(0.5)  // p3 vy
+      .mockReturnValueOnce(0.5)  // p3 size
+      .mockReturnValueOnce(0.5); // p3 opacity
+
     // Mock RAF
     let rafCallback: ((time: number) => void) | null = null;
     const rafSpy = vi.spyOn(window, 'requestAnimationFrame').mockImplementation((cb) => {
@@ -99,9 +121,11 @@ describe('HeroSection', () => {
     // Advance timers
     vi.advanceTimersByTime(100);
     
-    // Trigger RAF to run animate loop
-    if (rafCallback) {
-      (rafCallback as (time: number) => void)(100);
+    // Trigger RAF to run animate loop multiple times to cover boundaries
+    for (let i = 0; i < 10; i++) {
+      if (rafCallback) {
+        (rafCallback as (time: number) => void)(100);
+      }
     }
     
     // Unmount to trigger cleanup
@@ -112,6 +136,20 @@ describe('HeroSection', () => {
     
     getContextSpy.mockRestore();
     rafSpy.mockRestore();
+    randomSpy.mockRestore();
     vi.useRealTimers();
+  });
+
+  it('handles canvas getContext returning null', () => {
+    const getContextSpy = vi.spyOn(HTMLCanvasElement.prototype, 'getContext').mockReturnValue(null);
+    render(<HeroSection />);
+    expect(getContextSpy).toHaveBeenCalled();
+    getContextSpy.mockRestore();
+  });
+
+  it('renders correctly on server (SSR)', async () => {
+    const ReactDOMServer = await import('react-dom/server');
+    const html = ReactDOMServer.renderToString(<HeroSection />);
+    expect(html).toContain('CIVA');
   });
 });
