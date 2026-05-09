@@ -1,8 +1,8 @@
 # 🔐 Civa — Encrypted OTC Dark Pool on Solana
 
-![Civa](docs/assets/readme-hero.png)
-
 > **Hide your trades. Settle atomically. Zero MEV.** Institutional-grade OTC dark pool protocol using Encrypt SDK for encrypted state and Ika Custody for bridgeless atomic settlement. Audited by Adevar Labs.
+
+![Civa](docs/readme-hero.png)
 
 <br/>
 
