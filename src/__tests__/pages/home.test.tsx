@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest';
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 
 vi.mock('@/components/HeroSection', () => ({
   HeroSection: () => <div data-testid="hero-section" />,
@@ -58,5 +58,35 @@ describe('Home page', () => {
   it('renders the Connect Wallet button', () => {
     render(<Home />);
     expect(screen.getByRole('button', { name: /Connect Wallet/i })).toBeDefined();
+  });
+
+  it('handles mouse events on feature cards (TiltCard and FeatureCard)', () => {
+    // Mock getBoundingClientRect to return non-zero dimensions
+    const originalGetBoundingClientRect = HTMLElement.prototype.getBoundingClientRect;
+    HTMLElement.prototype.getBoundingClientRect = () => ({
+      width: 200,
+      height: 200,
+      left: 10,
+      top: 10,
+      bottom: 210,
+      right: 210,
+      x: 10,
+      y: 10,
+      toJSON: () => {}
+    });
+
+    render(<Home />);
+    
+    // Triggering event on an inner element will bubble up to TiltCard and FeatureCard
+    const stepElement = screen.getByText('Encrypt Order');
+    
+    // Fire mouse move
+    fireEvent.mouseMove(stepElement, { clientX: 100, clientY: 100 });
+    
+    // Fire mouse leave
+    fireEvent.mouseLeave(stepElement);
+
+    // Restore mock
+    HTMLElement.prototype.getBoundingClientRect = originalGetBoundingClientRect;
   });
 });

@@ -13,10 +13,10 @@
 
 <br/>
 
-[![Next.js 16](https://img.shields.io/badge/Next.js-16-black?logo=next.js)](https://nextjs.org)
-[![Solana](https://img.shields.io/badge/Solana-Devnet-9945FF?logo=solana)](https://solana.com)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript)](https://typescriptlang.org)
-[![License: MIT](https://img.shields.io/badge/License-MIT-cyan)](LICENSE)
+[![Next.js 16](https://img.shields.io/badge/Next.js-16-black?logo=next.js&style=flat-square)](https://nextjs.org)
+[![Solana](https://img.shields.io/badge/Solana-Devnet-9945FF?logo=solana&style=flat-square)](https://solana.com)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript&style=flat-square)](https://typescriptlang.org)
+[![License: MIT](https://img.shields.io/badge/License-MIT-cyan?style=flat-square)](LICENSE)
 
 ---
 
