@@ -89,7 +89,7 @@ const slides = [
     id: "demo",
     badge: "LIVE DEMO",
     title: "See It In Action",
-    subtitle: "frontier-adevar.vercel.app",
+    subtitle: "civa.edycu.dev",
     features: [
       { name: "Encrypted Order Creation", desc: "Create OTC offers with ZK proof generation" },
       { name: "Dark Pool Liquidity Board", desc: "Browse anonymized liquidity bands" },
@@ -105,7 +105,7 @@ const slides = [
     subtitle: "Ship the Protocol",
     body: "Civa is live on devnet with 72 tests and reproducible benchmarks. We need Adevar Labs' audit to take this to mainnet safely.",
     links: [
-      { label: "Live App", url: "frontier-adevar.vercel.app" },
+      { label: "Live App", url: "civa.edycu.dev" },
       { label: "GitHub", url: "github.com/edycutjong/frontier-adevar" },
       { label: "Twitter", url: "x.com/edycutjong" },
     ],
