@@ -1,24 +1,28 @@
 <div align="center">
-  <h1>Civa 🔐</h1>
-  <p><em>Hide your trades. Settle atomically. Zero MEV. Institutional-grade OTC dark pool protocol using Encrypt SDK for encrypted state and Ika Custody for bridgeless atomic settlement. Audited by Adevar Labs.</em></p>
-  <img src="docs/readme-hero.png" alt="Civa" width="100%">
 
-  <br/>
+# 🔐 Civa — CipherVault on Solana
 
-  [![Live Demo](https://img.shields.io/badge/🚀_Live-Demo-06b6d4?style=for-the-badge)](https://civa.edycu.dev)
-  [![Pitch Video](https://img.shields.io/badge/🎬_Pitch-Video-ef4444?style=for-the-badge)](https://youtube.com/watch?v=DEMO_VIDEO)
-  [![Pitch Deck](https://img.shields.io/badge/📊_Pitch-Deck-f59e0b?style=for-the-badge)](https://civa.edycu.dev/pitch)
-  [![Built for Frontier](https://img.shields.io/badge/Colosseum-Frontier_Hackathon-8b5cf6?style=for-the-badge)](https://superteam.fun/earn/listing/50k-adevarlabs-bounty)
+<p><strong>Hide your trades. Settle atomically. Zero MEV.</strong> Institutional-grade OTC dark pool protocol using Encrypt SDK for encrypted state and Ika Custody for bridgeless atomic settlement. Audited by Adevar Labs.</p>
 
-  <br/>
+<img src="docs/readme-hero.png" alt="Civa Hero Image" width="100%">
 
-  [![Next.js 16](https://img.shields.io/badge/Next.js-16-black?logo=next.js&style=flat-square)](https://nextjs.org)
-  [![Solana](https://img.shields.io/badge/Solana-Devnet-9945FF?logo=solana&style=flat-square)](https://solana.com)
-  [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript&style=flat-square)](https://typescriptlang.org)
-  [![License: MIT](https://img.shields.io/badge/License-MIT-cyan?style=flat-square)](LICENSE)
-  [![Civa CI](https://github.com/edycutjong/civa/actions/workflows/ci.yml/badge.svg)](https://github.com/edycutjong/civa/actions/workflows/ci.yml)
+<br/>
+
+[![Live Demo](https://img.shields.io/badge/🚀_Live-Demo-06b6d4?style=for-the-badge)](https://civa.edycu.dev/)
+[![Pitch Deck](https://img.shields.io/badge/📊_Pitch-Deck-f59e0b?style=for-the-badge)](https://civa.edycu.dev/pitch)
+[![Pitch Video](https://img.shields.io/badge/🎬_Pitch-Video-ef4444?style=for-the-badge)](https://youtube.com/watch?v=DEMO_VIDEO)
+[![Built for Frontier](https://img.shields.io/badge/Colosseum-Frontier_Hackathon-8b5cf6?style=for-the-badge)](https://superteam.fun/earn/listing/50k-adevarlabs-bounty)
+
+<br/>
+
+[![Next.js 16](https://img.shields.io/badge/Next.js-16-black?logo=next.js&style=flat)](https://nextjs.org)
+[![Solana](https://img.shields.io/badge/Solana-Devnet-9945FF?logo=solana&style=flat)](https://solana.com)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript&style=flat)](https://typescriptlang.org)
+[![License: MIT](https://img.shields.io/badge/License-MIT-cyan?style=flat)](LICENSE)
+[![Civa CI](https://github.com/edycutjong/civa/actions/workflows/ci.yml/badge.svg)](https://github.com/edycutjong/civa/actions/workflows/ci.yml)
 
 </div>
+
 ---
 
 ## 🎯 Problem
