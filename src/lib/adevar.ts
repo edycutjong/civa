@@ -6,7 +6,9 @@ export class AdevarService {
   constructor() {
     this.apiUrl = process.env.NEXT_PUBLIC_ADEVAR_API_URL || "https://api.encrypt.ika.network/v1";
     this.apiKey = process.env.ADEVAR_API_KEY || "";
-    console.log("[Adevar SDK] Initializing cipher auditing");
+    if (process.env.NODE_ENV !== 'test') {
+      console.log("[Adevar SDK] Initializing cipher auditing");
+    }
   }
 
   init() {

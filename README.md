@@ -9,7 +9,7 @@
 [![Live Demo](https://img.shields.io/badge/🚀_Live-Demo-06b6d4?style=for-the-badge)](https://civa.edycu.dev)
 [![Pitch Video](https://img.shields.io/badge/🎬_Pitch-Video-ef4444?style=for-the-badge)](https://youtube.com/watch?v=DEMO_VIDEO)
 [![Pitch Deck](https://img.shields.io/badge/📊_Pitch-Deck-f59e0b?style=for-the-badge)](https://civa.edycu.dev/pitch)
-[![Built for Frontier](https://img.shields.io/badge/Colosseum-Frontier_Hackathon-8b5cf6?style=for-the-badge)](https://superteam.fun/earn/listing/100xdevs-frontier-hackathon-track)
+[![Built for Frontier](https://img.shields.io/badge/Colosseum-Frontier_Hackathon-8b5cf6?style=for-the-badge)](https://superteam.fun/earn/listing/50k-adevarlabs-bounty)
 
 <br/>
 
@@ -33,7 +33,7 @@ The crypto OTC market exceeds **$100B annually**, yet there is no privacy-preser
 
 ## 💡 Solution
 
-**Civa (CipherVault)** provides an encrypted OTC dark pool:
+**Civa (CipherVault)** provides an encrypted OTC dark pool in the **DeFi** category:
 
 1. 🔒 **Makers post encrypted offers** — lock assets in vault PDAs, trade params encrypted via Encrypt SDK
 2. 👁️ **Takers match blindly** — browse liquidity bands ($1M-$5M) without seeing exact amounts
@@ -87,7 +87,8 @@ Open [http://localhost:3000](http://localhost:3000) — the hero page loads with
 | `NEXT_PUBLIC_ADEVAR_API_URL` | Optional | [Encrypt SDK](https://docs.encrypt.network) — defaults to demo endpoint |
 | `ADEVAR_API_KEY` | Optional | Not required (No developer portal for Ika yet) |
 
-> **💡 Note for Judges:** All API keys are **optional**! The app runs in fully functional demo mode without them. You can test the entire Encrypt/Ika flow using our built-in sample data.
+> **💡 Note for Judges (Where to get the API key?):** 
+> The variable is named `ADEVAR_API_KEY` after the track sponsor, but it is actually intended for the Encrypt SDK / Ika backend. Because a public developer portal does not exist yet, **you do not need an API key.** All API keys are **100% optional**. If left blank, the app will automatically fall back to generating mock ZK proofs so you can test the entire flow uninterrupted.
 
 ---
 
@@ -168,6 +169,17 @@ docs/
 | Double-spend | Atomic escrow — both sides lock first |
 | Timeout exploitation | Auto-refund after configurable timeout |
 | Oracle manipulation | No oracle — peer-to-peer pricing |
+
+### Security Statement
+Civa handles institutional liquidity and executes complex atomic settlements using novel cryptographic primitives (Encrypt SDK) and custody logic (Ika SDK). Because our core value proposition is secure, zero-MEV trading, our architecture must be impenetrable. A professional security audit from Adevar Labs is critical to validating our escrow mechanisms, zero-knowledge integrations, and Anchor program safety before we can safely onboard institutional capital to the Solana mainnet.
+
+---
+
+## 💰 Funding & Pitch Deck
+
+- **Pitch Deck:** [View our complete investor pitch deck](https://civa.edycu.dev/pitch)
+- **Funding Stage:** Civa is currently bootstrapped. We are actively utilizing the Colosseum Frontier Hackathon to validate our product-market fit.
+- **Future Plans:** Post-hackathon, we plan to raise a pre-seed round to fund a mainnet launch, finalize our security audits, and execute our initial go-to-market strategy targeting high-volume OTC traders.
 
 ---
 
